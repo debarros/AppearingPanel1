@@ -58,7 +58,7 @@ shinyServer(function(input, output) {
   p2 = reactive({if (length(input$SelectedStudents)==0){return(NULL)
   } else tabPanel(title = "Pick Classes",uiOutput("ClassCheckList"), value = "second")})
   
-  p3 = reactive({if (length(input$SelectedClasses)==0){return(NULL)
+  p3 = reactive({if (length(input$SelectedClasses)*length(input$SelectedStudents)==0){return(NULL)
   } else tabPanel(title = "Summary",tableOutput("Summary"), value = "third")})
   
   #This holds which tab is selected so that the right tab shows up when the widget is rebuilt
