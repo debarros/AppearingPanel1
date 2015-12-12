@@ -1,6 +1,6 @@
 library(shiny)
 shinyUI(pageWithSidebar(
-  headerPanel("Subset data before analyzing"),
-  sidebarPanel(),
-  mainPanel(uiOutput("Panels"))
-))
+  headerPanel("Make next panel appear as each one is completed"),
+  sidebarPanel(uiOutput("startbox")),
+  mainPanel(uiOutput("panels"))
+))#end of shinyUI
